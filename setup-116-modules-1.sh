@@ -6,7 +6,7 @@
 # cant directly install serialization.xstream using SDK since its uploaded with extension .omod instead of .jar
 # therefore SDK cannot find it
 # see https://talk.openmrs.org/t/cannot-install-serialization-xstream-via-openmrs-sdk/6395
-wget "http://mavenrepo.openmrs.org/nexus/content/repositories/modules/org/openmrs/module/serialization.xstream-omod/0.2.9/serialization.xstream-omod-0.2.9.omod" && mvn install:install-file -DartifactId=serialization.xstream-omod -Dversion=0.2.9 -Dpackaging=jar -Dfile=serialization.xstream-omod-0.2.9.omod && mvn openmrs-sdk:install -DserverId=116 -DartifactId=serialization.xstream -Dversion=0.2.9
+wget "http://mavenrepo.openmrs.org/nexus/content/repositories/modules/org/openmrs/module/serialization.xstream-omod/0.2.9/serialization.xstream-omod-0.2.9.omod" && mvn install:install-file -DgroupId=org.openmrs.module -DartifactId=serialization.xstream-omod -Dversion=0.2.9 -Dpackaging=jar -Dfile=serialization.xstream-omod-0.2.9.omod && mvn openmrs-sdk:install -DserverId=116 -DgroupId=org.openmrs.module -DartifactId=serialization.xstream -Dversion=0.2.9
 
 mvn openmrs-sdk:install -DserverId=116 -DartifactId=webservices.rest -Dversion=2.14
 
