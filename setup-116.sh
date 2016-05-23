@@ -7,3 +7,5 @@ mvn openmrs-sdk:setup-platform \
     -DdbDriver="mysql" \
     -DdbUri="jdbc:mysql://localhost:3306/openmrs116?autoReconnect=true&sessionVariables=storage_engine=InnoDB&useUnicode=true&characterEncoding=UTF-8"
 
+cp installation.properties "$USERPROFILE/openmrs/116"
+
